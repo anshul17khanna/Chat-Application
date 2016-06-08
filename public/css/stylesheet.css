@@ -1,0 +1,11 @@
+body {
+  background-color: #f0f1f3 !important;
+}
+
+.btn-lg {
+  padding: 30px 36px !important;
+  font-size: 18px;
+  line-height: 3 !important;
+  border-radius: 6px;
+  margin-top: 150px !important;
+}
