@@ -9,3 +9,33 @@ body {
   border-radius: 6px;
   margin-top: 150px !important;
 }
+
+.chatLogin {
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	width: 700px;
+	height: 400px;
+}
+.chatLogin h2 {
+	padding-top: 20px;
+}
+.loginInfo {
+	text-align: left;
+	float: right;
+	margin: 65px 165px 0 0;
+}
+
+#NickName {
+	float:left;
+	padding-left:10px;
+	width: 300px;
+	height: 30px;
+	margin-bottom:20px;
+	overflow: hidden;
+}
+
+#submit {
+	float:left;
+	width: 110px;
+}
