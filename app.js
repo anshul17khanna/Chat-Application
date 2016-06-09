@@ -1,6 +1,6 @@
 var app = require("express")();
 
-app.set('port', process.env.PORT || 8888);
+app.set('port', process.env.PORT || 3000);
 
 var port = app.listen(app.get('port'));
 
