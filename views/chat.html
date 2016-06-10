@@ -6,8 +6,8 @@
   <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
   <script src="../js/jquery-1.10.2.min.js"></script>
   <script src="../js/jquery.js"></script>
-
-	<script src="../js/chat.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/chat.js"></script>
   <script src="../js/moment.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 </head>
@@ -17,18 +17,27 @@
 
     <div class="chatLogin">
       <div class="loginInfo">
-				<br/>
         <form role="form">
-          <div class="form-group">
-            <input type="text" id="NickName" class="form-control" placeholder="Enter your nick name"><br/>
+          <div class="form-group" class="loginForm">
+            <input type="text" id="selfNickName" class="form-control" placeholder="Enter your nick name"><br/>
           </div>
           <input type="submit" class="form-control btn btn-primary" id="submit" value="ENTER"/>
         </form>
       </div>
     </div>
 
-		
-
+		<div class="member">
+			<div class="memberInfo">
+        <form role="form" class="loginForm">
+          <div class="form-group">
+            <input type="text" id="otherNickName" class="form-control" placeholder="Enter your nick name"><br/>
+          </div>
+          <input type="submit" class="form-control btn btn-primary" id="submit" value="ENTER"/>
+        </form>
+			</div>
+		</div>
+    
+  </section>
 </body>
 
 </html>
