@@ -1,12 +1,13 @@
 // Client-Side
 
 function _init(){
-    var section = $(".section"),
-		    chatLogin = $(".chatLogin"),
-		    member = $(".member"),
-		    loginForm = $(".loginForm"),
-		    selfNickName = $("#selfNickName"),
-		    otherNickName = $("#otherNickName");
+  var section = $(".section"),
+		  chatLogin = $(".chatLogin"),
+		  member = $(".member"),
+		  loginForm = $(".loginForm"),
+		  selfNickName = $("#selfNickName"),
+		  otherNickName = $("#otherNickName");
+      chats = $(".chats");
 
   var socket = io(),
       id = Number(window.location.href.split('/')[4]);
@@ -50,6 +51,16 @@ function _init(){
 
         socket.emit('login', {user: name, id: id});
       });
+    }
+  });
+
+  socket.on('startChat', function(data){
+    console.log(data);
+
+    if(console.boolean && data.id == id){
+      chats.empty();
+
+			
     }
   });
 
