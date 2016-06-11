@@ -1,12 +1,12 @@
 // Client-Side
 
 function _init(){
-  var section = $(".section"),
-		  chatLogin = $(".chatLogin"),
-		  member = $(".member"),
-		  loginForm = $(".loginForm"),
-		  selfNickName = $("#selfNickName"),
-		  otherNickName = $("#otherNickName");
+    var section = $(".section"),
+		    chatLogin = $(".chatLogin"),
+		    member = $(".member"),
+		    loginForm = $(".loginForm"),
+		    selfNickName = $("#selfNickName"),
+		    otherNickName = $("#otherNickName");
 
   var socket = io(),
       id = Number(window.location.href.split('/')[4]);
