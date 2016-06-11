@@ -24,7 +24,7 @@ body {
 	margin: 65px 200px; 0 0;
 }
 
-#ownerNickName, #otherNickName {
+#selfNickName, #otherNickName {
 	float:left;
 	width: 200px;
 	height: 30px;

@@ -12,4 +12,7 @@ module.exports = function(app, io){
 		response.render('chat');
 	});
 
+  var chat = io.on('connection', function (socket) { // testing
+    socket.emit('totalchatpeople', { num : 1});
+  });
 }
