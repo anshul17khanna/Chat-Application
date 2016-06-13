@@ -21,7 +21,7 @@ body {
 .loginInfo, .memberInfo {
 	text-align: left;
 	float: right;
-	margin: 65px 200px; 0 0;
+	margin: 65px 220px 0 0;
 }
 
 #selfNickName, #otherNickName {
@@ -33,6 +33,16 @@ body {
 }
 
 #submit {
-	float:left;
-	width: 110px;
+	width: 75px;
+	height: 40px;
+	float:left;;
+	text-align:center;
+	background-color: rgb(66, 139, 202);
+	display: block;
+	margin: 0 auto;
+	border: none;
+	border-radius: 5px;
+	color:white;
+	outline: none;
+	cursor:pointer;
 }

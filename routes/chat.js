@@ -21,7 +21,7 @@ function clientRoom(io,roomId,namespace) {
 
 module.exports = function(app, io){
 
-  var id = Math.round((Math.random()*100000));
+  var id = Math.round((Math.random()*1000000));
 
   app.get('/create', function(request, response){
 		response.redirect('/chat/'+id);
@@ -32,7 +32,7 @@ module.exports = function(app, io){
 	});
 
   var chat = io.on('connection', function (socket){
-    socket.on('load', function(){
+    socket.on('load', function(data){
       var room = clientRoom(io, data);
 
       if(room.length === 0){
@@ -46,7 +46,7 @@ module.exports = function(app, io){
 			}
     });
 
-    socket.on('login', function(){
+    socket.on('login', function(data){
       var room = clientRoom(io, data.id);
 
       socket.username = data.user;
