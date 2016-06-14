@@ -136,7 +136,7 @@ footer {
 	left:0;
 	width:100%;
 	padding-top: 30px;
-	background-color: #1aba8a;
+	background-color: white;
 	height: 130px;
 }
 
@@ -160,7 +160,7 @@ footer {
 	margin: 0 auto;
 	background-color: #f9f9f9;
 	border: 1px solid #cccccc;
-	border-radius: 5px;
+	border-radius: 2px;
 	padding-left: 20px;
 	padding-top: 20px;
 	resize: none;
@@ -179,8 +179,4 @@ footer {
 	width:700px;
 	margin: 0 auto 200px;
 	overflow:hidden;
-}
-
-.chatLogin, .member, .left, footer {
-	display:none;
 }
