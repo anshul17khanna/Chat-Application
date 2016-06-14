@@ -70,17 +70,6 @@ function _init(){
 
   socket.on('startChat', function(data){
     console.log(data);
-
-    if(console.boolean && data.id == id){
-      chats.empty();
-
-      if(name === data.users[0])
-				showMessage("youStartedChatWithNoMessages",data);
-			else
-        showMessage("heStartedChatWithNoMessages",data);
-
-			chatNickname.text(friend);
-    }
   });
 
   socket.on('leave',function(data){
@@ -165,22 +154,6 @@ function _init(){
 			chatLogin.css("display", "none");
 			member.fadeIn(500);
 			chatNickname.text(data.user);
-		}
-
-		else if(status === "youStartedChatWithNoMessages") {
-			left.fadeOut(500, function() {
-			footer.fadeIn(500);
-			});
-
-			friend = data.users[1];
-		}
-
-		else if(status === "heStartedChatWithNoMessages") {
-			member.fadeOut(500, function(){
-				footer.fadeIn(500);
-			});
-
-			friend = data.users[0];
 		}
 
 		else if(status === "chatStarted"){
