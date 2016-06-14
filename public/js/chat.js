@@ -75,7 +75,6 @@ function _init(){
   socket.on('leave',function(data){
 		if(data.boolean && id==data.room){
 			showMessage("somebodyLeft", data);
-			chats.empty();
 		}
 	});
 
