@@ -12,7 +12,6 @@ function _init(){
       chats = $(".chats"),
       textarea = $("#message"),
       msgTime = $(".msgTime"),
-      inviteSomebody = $(".invite"),
       chatScreen = $(".chatscreen"),
 		  left = $(".left"),
       leftNickname = $(".nickname-left"),
@@ -24,6 +23,7 @@ function _init(){
 
   socket.on('connect', function(){
     socket.emit('load', id);
+    footer.css('display', 'none');
 	});
 
   var name = "",
@@ -42,9 +42,10 @@ function _init(){
 					return;
 				}
 
-        showMessage("inviteSomebody");
-
+        chatLogin.fadeOut(500);
         socket.emit('login', {user: name, id: id});
+
+        footer.fadeIn(500);
       });
     } else {
       showMessage('existingChat',data);
@@ -61,6 +62,8 @@ function _init(){
 
         member.fadeOut(500);
         socket.emit('login', {user: name, id: id});
+
+        footer.fadeIn(500);
       });
     }
   });
@@ -118,7 +121,7 @@ function _init(){
 	});
 
   function scrollToBottom(){
-		$("html, body").animate({ scrollTop: $(document).height()-$(window).height() },1000);
+		$("html, body").animate({ scrollTop: $(document).height() }, 1500);
 	}
 
   setInterval(function(){
@@ -152,7 +155,44 @@ function _init(){
 
 	}
 
-  
+  function showMessage(status,data){
+    if(status === "newChat"){
+			section.children().css('display', 'none');
+			chatLogin.fadeIn(500);
+		}
+
+		else if(status === "existingChat"){
+			chatLogin.css("display", "none");
+			member.fadeIn(500);
+			chatNickname.text(data.user);
+		}
+
+		else if(status === "youStartedChatWithNoMessages") {
+			left.fadeOut(500, function() {
+			footer.fadeIn(500);
+			});
+
+			friend = data.users[1];
+		}
+
+		else if(status === "heStartedChatWithNoMessages") {
+			member.fadeOut(500, function(){
+				footer.fadeIn(500);
+			});
+
+			friend = data.users[0];
+		}
+
+		else if(status === "chatStarted"){
+			section.children().css('display','none');
+			chatScreen.css('display','block');
+		}
+
+		else if(status === "somebodyLeft"){
+			leftNickname.text(data.user);
+			left.fadeIn(500);
+		}
+	}
 }
 
 window.onload = _init;

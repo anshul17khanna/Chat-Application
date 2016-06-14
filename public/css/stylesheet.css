@@ -46,3 +46,141 @@ body {
 	outline: none;
 	cursor:pointer;
 }
+
+.left {
+	text-align:center;
+	display: block;
+	margin:0px auto;
+	color: #000;
+}
+
+.nickname-left {
+	width: 40px;
+	overflow: hidden;
+}
+
+.info {
+	text-align: left;
+	float: right;
+	margin: 0;
+	width: 405px;
+	overflow: hidden;
+}
+
+.nickname-chat {
+	overflow: hidden;
+}
+
+.body {
+	text-align:center;
+	width: 40%;
+	display: block;
+	margin:0px auto 650px;
+	background-color: #ffffff;
+	color: #637277;
+}
+
+.chats {
+	list-style-type: none;
+	margin-top:10px;
+}
+
+.self {
+	clear:both;
+	float:right;
+}
+
+.other {
+	clear:both;
+	float:left;
+}
+
+.chats .self p {
+	text-align:left;
+	float: left;
+	display: inline-block;
+	margin-bottom:5px;
+	padding: 10px 15px;
+	min-width: 160px;
+	min-height: 10px;
+	max-width: 510px;
+	background-color: #1aba8a;
+	border-radius: 3px;
+	box-shadow: 0px 3px 3px #E3E4E6;
+	color: #fff;
+	line-height: 1.4;
+	word-wrap: break-word;
+}
+
+.chats .other p {
+	text-align:left;
+	float: left;
+	display: inline-block;
+	margin-right:20px;
+	margin-bottom:5px;
+	padding: 10px 15px;
+	min-width: 160px;
+	min-height: 10px;
+	max-width: 510px;
+	background-color: #73b4d4;
+	border-radius: 3px;
+	box-shadow: 0px 3px 3px #E3E4E6;
+	color: #fff;
+	line-height: 1.4;
+	word-wrap: break-word;
+}
+
+footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	padding-top: 30px;
+	background-color: #1aba8a;
+	height: 130px;
+}
+
+#chatform {
+	width:700px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+#chatform #submit {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#message {
+	width: 550px;
+	height: 80px;
+	display: block;
+	float:left;
+	margin: 0 auto;
+	background-color: #f9f9f9;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	padding-left: 20px;
+	padding-top: 20px;
+	resize: none;
+	font:inherit;
+	color:inherit;
+}
+
+.msgTime {
+  clear:both;
+	float:inherit;
+	margin-bottom:10px;
+}
+
+.chatscreen{
+	display:none;
+	width:700px;
+	margin: 0 auto 200px;
+	overflow:hidden;
+}
+
+.chatLogin, .member, .left, footer {
+	display:none;
+}
