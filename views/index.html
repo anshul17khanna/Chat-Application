@@ -11,19 +11,50 @@
 
 <body>
   <div class="container">
+
     <div class="row" align="center">
+
       <div class="col-sm-2"></div>
       <div class="col-sm-3">
         <a href="/create" class="btn btn-primary btn-lg"><b>Create a Chat Room</b></a>
       </div>
       <div class="col-sm-2"></div>
       <div class="col-sm-3">
-        <button type="button" class="btn btn-success btn-lg"><b>Join a Chat Room</b></button>
+        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+          <b>Join a Chat Room</b>
+        </button>
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Paste your link</h4>
+              </div>
+              <div class="modal-body">
+                <form role="form" id="join">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="roomLocation"><br/>
+                  </div>
+                  <input type="submit" class="btn btn-primary" value="Go" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-sm-2"></div>
-    </div>
-  </div>
 
+    </div>
+
+  </div>
 </body>
+<script>
+  $(document).ready(function(){
+    $('#join').submit(function(e){
+      e.preventDefault();
+      location.href = $('#roomLocation').val();
+    });
+  });
+</script>
 
 </html>

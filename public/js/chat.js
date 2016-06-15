@@ -161,8 +161,8 @@ function _init(){
 		}
 
 		else if(status === "somebodyLeft"){
-      $('.chats').append('<div class="left"><div class="info"><h4><span class="nickname-left">' +
-                          data.user + '</span> has left this chat.</h4></div></div>');
+      $('.chats').append('<div class="left"><div class="info"><h4 align="center"><span class="nickname-left">' +
+                          data.user + '</span> has left the chat.</h4></div></div>');
 			scrollToBottom();
 		}
 	}
