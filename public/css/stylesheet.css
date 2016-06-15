@@ -72,6 +72,11 @@ body {
 	overflow: hidden;
 }
 
+.info h4 {
+  font-size: 15px;
+  color: #767676;
+}
+
 .nickname-chat {
 	overflow: hidden;
 }
@@ -135,6 +140,14 @@ body {
 	word-wrap: break-word;
 }
 
+.chats b {
+  font-size: 15px;
+}
+
+.chats li div b {
+  color: #666666;
+}
+
 footer {
 	position:fixed;
 	bottom:0;
@@ -179,7 +192,7 @@ footer {
 	margin-bottom:10px;
 }
 
-.chatLogin, .member, footer {
+.chatLogin, .member, footer, .invite {
 	display:none;
 }
 
