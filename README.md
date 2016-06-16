@@ -1,8 +1,10 @@
 # Group-Chat-Messenger
 #### Usage
 ```
-$ cd <donload-directory>/Group-Chat-Messenger
+$ git clone https://github.com/anshul17khanna/Group-Chat-Messenger.git
+$ cd Group-Chat-Messenger
 $ npm install
 $ node app.js
+Open http://localhost:3000/
 ```
 ![Chat](Screenshots/chat.png)
