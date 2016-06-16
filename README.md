@@ -7,4 +7,6 @@ $ npm install
 $ node app.js
 Open http://localhost:3000/
 ```
+
+#### Screenshot
 ![Chat](Screenshots/chat.png)
